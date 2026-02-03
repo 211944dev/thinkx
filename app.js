@@ -49,3 +49,10 @@ function renderAnswer(text) {
     </div>
   `;
 }
+async function readImage(input) {
+  response.innerHTML = "Reading image…";
+
+  const file = input.files[0];
+  const result = await Tesseract.recognize(file, "eng");
+  question.value = result.data.text;
+}
