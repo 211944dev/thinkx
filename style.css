@@ -1,0 +1,85 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f7f8fa;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 16px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+main {
+  padding: 16px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 120px;
+  margin-top: 10px;
+}
+
+button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #3b82f6;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+#response {
+  margin-top: 20px;
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+}
+.answer-card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  line-height: 1.5;
+}
+
+.answer-card h3 {
+  margin-top: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.actions button {
+  flex: 1;
+  background: #e5e7eb;
+  color: black;
+}
+.tabs button {
+  background: white;
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+textarea {
+  font-size: 15px;
+}
