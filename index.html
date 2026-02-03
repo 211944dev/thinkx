@@ -1,3 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Homework AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<header>
+  <input type="text" id="searchInput" placeholder="Ask anything..." />
+</header>
+
+<main>
+  <div class="mode-tabs">
+    <button class="active">General</button>
+    <button>Math</button>
+    <button>History</button>
+  </div>
+
+  <div class="action-circle" onclick="openCamera()">+</div>
+
+  <div class="quick-actions">
+    <button onclick="scanImage()">📷 Scan</button>
+    <button onclick="askAI()">✨ Solve</button>
+  </div>
+
+  <div id="output"></div>
+</main>
+
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="study.html">Study</a>
+</nav>
+
+<script src="js/app.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/ocr.js"></script>
+</body>
+</html>
 <div class="mode-tabs" id="subjects">
   <button onclick="setSubject('general')" class="active">General</button>
   <button onclick="setSubject('math')">Math</button>
