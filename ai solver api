@@ -1,0 +1,26 @@
+// app/api/solve/route.ts
+import { NextResponse } from "next/server";
+import OpenAI from "openai";
+
+const client = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY!,
+});
+
+export async function POST(req: Request) {
+  const { question, subject } = await req.json();
+
+  const completion = await client.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [
+      {
+        role: "system",
+        content: `You are a helpful ${subject} tutor. Explain step by step.`,
+      },
+      { role: "user", content: question },
+    ],
+  });
+
+  return NextResponse.json({
+    answer: completion.choices[0].message.content,
+  });
+}
